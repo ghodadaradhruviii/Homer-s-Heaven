@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            scrollbar-width: none;
+
+            
+        }
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+        .parent{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            /* flex-wrap: wrap; */
+            /* border: 2px solid red; */
+            align-items: center;
+            /* justify-content: center; */
+            padding-left: 5rem;
+            padding-right: 5rem;
+            gap: 5rem;
+        }
+        .content_img{
+            min-width: 60%;
+            max-width: 50rem;
+            height: 60rem;
+            /* border: 2px solid black; */
+            /* background-image: url("img\ 6.jpg"); */
+            /* object-fit: cover; */
+        }
+        .main_img{
+            width: 100%;
+            height: 100%;
+            border-radius: 4rem ;
+        }
+        .contant_text{
+            min-width: 35%;
+            height: 60rem;
+            /* border: 2px solid gold; */
+            padding-top: 7rem;
+        }
+        .btn{
+            width: 5rem;
+            font-size: 3rem;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 1000;
+            height: 5rem;
+            margin: 2rem;
+            border-radius: 50%;
+            position: absolute;
+            right: 2rem;
+            top: 8rem;
+            background-color: rgb(5, 5, 84);
+        }
+        h3{
+            font-size: 4.5rem;
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        span{
+            /* border: 2px solid black; */
+            font-size: 2.5rem;
+            font-weight: 600;
+            padding-left: 2rem;
+        }
+        
+        .Address{
+            font-size: 2.2rem;
+            padding-left: 3rem;   
+            margin-top: 1rem;
+            margin-bottom: 5rem;
+        }
+        ul{
+            margin-top: 1rem;
+            margin-left: 5rem;
+            font-size: 1.7rem;
+        }
+        li{
+            /* list-style: none; */
+            padding: 0.3rem;
+            font-size: 2rem;
+        }
+        /* li::marker{
+            content: ">";
+        } */
+
+        .sec{
+            width: 100%;
+            height: 6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            /* border: 2px solid black; */
+        }
+        .sec_btn{
+            width: 25rem;
+            height: 6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(5, 5, 84);
+            border-radius: 5rem;
+            color: white;
+        }
+        .arrow_down{
+            font-size: 4rem;
+            font-weight: 1000;
+            transform: rotate(90deg);
+            animation: down_arrow 1s infinite ease-in-out;
+        }
+        .scroll{
+            font-size: 2.5rem;
+            padding-right: 3rem;
+        }
+
+        .parent7 {
+            width: 100%;
+            margin-left: 0px;
+            height: 360px;
+            margin-top: 100px;
+            border: 2px solid black;
+            display: flex;
+            /* justify-content: center; */
+            /* margin-bottom: 200px; */
+            background-color: rgb(8, 8, 56);
+        }
+
+        .c10 {
+            width: 330px;
+            height: 320px;
+            /* border: 2px solid black; */
+            margin: 20px;
+
+        }
+
+        .p10 {
+            font-size: 16px;
+            color: rgb(195, 192, 192);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .c20 {
+            width: 200px;
+            height: 320px;
+            /* border: 2px solid white; */
+            margin: 20px 10px;
+        }
+
+        .product {
+            color: rgb(214, 210, 210);
+            cursor: pointer;
+            font-size: 20px;
+            margin: 30px;
+            margin-top: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .ul1 {
+            list-style: none;
+            margin: 20px;
+            color: rgb(196, 193, 193);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        li {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .c30 {
+            width: 270px;
+            height: 320px;
+            /* border: 2px solid black; */
+            margin: 20px;
+
+        }
+        
+        @keyframes down_arrow{
+            0%{
+                margin-top: -8rem;
+            }
+            10%{
+                margin-top: -4rem;
+            }
+            20%{
+                margin-top: -3rem;
+            }
+            30%{
+                margin-top: -2rem;
+            }
+            40%{
+                margin-top: -1rem;
+                /* font-size: 3.5rem; */
+            }
+            50%{
+                margin-top: 0rem;
+                /* font-size: 4rem; */
+            }
+            60%{
+                /* font-size: 3.5rem; */
+                margin-top: 1rem;
+            }
+            70%{
+                margin-top: 2rem;
+            }
+            80%{
+                margin-top: 3rem;
+            }
+            90%{
+                margin-top: 4rem;
+            }
+            100%{
+                margin-top: 8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="content_img">
+            <img src="img/img 3.jpg" class="main_img" alt="">
+        </div>
+        <div class="contant_text">
+            <a href="listing.html"><div class="btn">< </div></a>
+            <h3>Ocean Breeze Villa</h3>
+            <span>Address:</span> 
+            <p class="Address">123 Main Street,cable Bridge,<br>Surat,Gujarat</p>
+            <span>Facility:</span>
+            <ul>
+                <li>Four Bedroom</li>
+                <li>Hall</li>
+                <li>Kitchen</li>
+                <li>Garden Area</li>
+                <li>Parking</li>
+            </ul>
+            <div class="sec"><div class="sec_btn">
+                <p class="scroll">Scroll Down</p>
+                <p class="arrow_down">> </p>
+            </div></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="parent7">
+            <div id="c" class="c10">
+                <img src="img/logo.png" alt="" width="300px" class="footimg">
+                <p class="p10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique expedita veritatis
+                    nulla cupiditate porro?</p>
+            </div>
+            <div id="c1" class="c20">
+                <h2 class="product">Product</h2>
+                <ul class="ul1">
+                    <li>Feature</li>
+                    <li>Pricing</li>
+                    <li>Visiting</li>
+                    <li>Case Studies</li>
+                    <li>Reviews</li>
+                </ul>
+            </div>
+            <div id="c1" class="c20">
+                <h2 class="product">Company</h2>
+                <ul class="ul1">
+                    <li>About</li>
+                    <li>Contact us</li>
+                    <li>Careers</li>
+                    <li>Culture</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+            <div id="c1" class="c20">
+                <h2 class="product">Support</h2>
+                <ul class="ul1">
+                    <li>Getting started </li>
+                    <li>Help center</li>
+                    <li>Server status</li>
+                    <li>Report a bug</li>
+                    <li>Chat support</li>
+                </ul>
+            </div>
+            <div id="c2" class="c30">
+                <h2 class="product">Contact us</h2>
+                <ul class="ul1">
+                    <li>homersheaven@gmail.com</li>
+                    <li>(0261)687-5892</li>
+                    <li>366 Mcallister St <br> Surat Gujarat</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

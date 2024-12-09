@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+
+        body {
+            background-color: black;
+            background-size: 100%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100vw;
+        }
+
+        .container {
+            background-color: powderblue;
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .header {
+
+            padding: 20px;
+        }
+
+        .header h2 {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .form {
+            padding: 40px;
+        }
+
+        .form-control {
+            position: relative;
+            margin-bottom: 30px;
+            width: 100%;
+
+        }
+
+        .form-control input {
+            width: 100%;
+            border: 1px solid black;
+            display: block;
+            padding: 10px;
+
+        }
+
+
+
+
+        .form .btn {
+            border-radius: 100px;
+            border: none;
+            outline: none;
+            color: chartreuse;
+            display: block;
+            font-size: 16px;
+            margin-top: 20px;
+            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            justify-content: center;
+            align-content: center;
+        }
+    </style> -->
+
+<style>
+      .parent {
+            width: 100%;
+            height: 100vh;
+            background-image: url(img/img\ 6.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .navbar {
+            width: 99%;
+            margin: auto;
+            padding:-20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border: 2px solid black; */
+        }
+
+        .logo {
+            width: 400px;
+            cursor: pointer;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 25px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: rgb(243, 240, 240);
+            font-size: 17px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            transition: .5s color,  .5s border-bottom;
+        }
+        .login{
+            
+            width: 95px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: rgb(68, 68, 94);
+            margin: 0px;
+            padding: 10px;
+            padding-left: 20px;
+            display: flex;
+            justify-content: center;
+        } 
+
+        .nineth_section{
+    background-image: url(./images/contact-left-dec.png);
+    
+    width: 300px;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+.first{
+    color: black;
+    font-size: 30px;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 100px;
+    font-weight: 700;
+}
+.nine_1{
+    float: left;
+}
+.nine_2{
+    height: 500px;
+    width: 400px;
+    margin-left: 700px;
+    background-size: 500px 400px;
+    background-image: url(./images/contact-form-bg.png);
+}
+.nineth_section{
+    position: absolute;
+}
+.nine_2 input{
+    margin-top: 30px;
+}
+.nine_2 .contact_button button{
+    margin-top: 50px;
+}
+
+.parent7 {
+            width: 100%;
+            margin-left: 0px;
+            height: 360px;
+            margin-top: 10px;
+            border: 2px solid black;
+            display: flex;
+            /* justify-content: center; */
+            /* margin-bottom: 200px; */
+            background-color: rgb(8, 8, 56);
+        }
+
+        .c10 {
+            width: 330px;
+            height: 320px;
+            /* border: 2px solid black; */
+            margin: 20px;
+
+        }
+
+        .p10 {
+            font-size: 16px;
+            color: rgb(195, 192, 192);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .c20 {
+            width: 200px;
+            height: 320px;
+            /* border: 2px solid white; */
+            margin: 20px 10px;
+        }
+
+        .product {
+            color: rgb(214, 210, 210);
+            cursor: pointer;
+            font-size: 20px;
+            margin: 30px;
+            margin-top: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .ul1 {
+            list-style: none;
+            margin: 20px;
+            color: rgb(196, 193, 193);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        li {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .c30 {
+            width: 270px;
+            height: 320px;
+            /* border: 2px solid black; */
+            margin: 20px;
+
+        }
+
+      
+
+
+       
+</style>
+
+</head>
+
+<body>
+    <script src="./jquery.js"></script>
+    <div class="parent">
+        <div class="navbar">
+            <img class="logo" src="img/logo.png" alt="">
+            <ul>
+                <li ><a href="home.html" class="active"> HOME</a></li>
+                <li><a href="listing.html"> LISTING</a></li>
+                <li><a href="sevice.html">SERVICES</a></li>
+
+                <li><a href="contact.html">CONTACT US</a></li>
+
+                <i class="fa-solid fa-arrow-right"></i> 
+                <li class="login"><a href="login.html">LOG IN</a></li>
+              
+
+
+
+            </ul>
+            <span class="mb-search__tab__ani" style="width: 65px; left: 630px;"></span>
+        </div>
+
+    </div>
+
+    <!-- <div class="parent">
+        <div class="navbar">
+            <img class="logo" src="logo.png" alt="">
+            <ul>
+                <li ><a href="home.html" class="active"> HOME</a></li>
+                <li><a href="listing.html"> LISTING</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="contact.html">REGESTATION FORM</a></li>
+                <i class="fa-solid fa-arrow-right"></i> 
+                <li class="login"><a href="contact.html">LOG IN</a></li> 
+
+
+
+            </ul>
+            <span class="mb-search__tab__ani" style="width: 65px; left: 630px;"></span>
+        </div>
+        <div class="content">
+            <h1 class="H1">Finding Your New <br>Home Is Simple</h1>
+            <p class="p1"><br>Homer's heaven is your go to destination for finding the <br> perfect rental home to suit
+                your needs.</p>
+            <p class="p2">With thousands of property listings accross the india.</p>
+        </div>
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="header">
+            <h1>REGISTRATION FORM</h1>
+        </div>
+
+        <form action="" method="get" class="form " name="form" onsubmit="myfun()">
+
+            <div class="form-control">
+                <label for="fname">User Name</label>
+                <input type="text" name="username" id="username" placeholder="Enter The Name">
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email id">
+            </div>
+
+            <div class="form-control">
+                <label for="phone nmuber">Phone Number</label>
+                <input type="text" name="phonenumber" id="phonenumber" placeholder="Enter your mobile number">
+            </div>
+
+            <div class="form-control">
+                <label for="password">password</label>
+                <input type="password" name="password" id="password" placeholder="Enter the password">
+            </div>
+
+            <div class="form-control">
+                <label for="fname">Cpassword</label>
+                <input type="password" name="cpassword" id="cpassword" placeholder="Enter The cpssword">
+            </div>
+
+
+
+            <button class="btn">Submit</button>
+            <button class="btn"> <a href="home.html">Back</button></a>
+
+        </form>
+
+    </div> -->
+<!-- 
+    <div class="nineth_section">
+        <div class="first">
+            Feel Free To <span class="color_web">Contact</span> Us Via The <span class="color_seo">HTML Form</span>
+        </div>
+        <div class="nine_1">
+            <iframe hight="700px"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235013.74842400278!2d72.41492542452872!3d23.02047410440972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1705669527750!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="nine_2">
+            Name: <input type="text"> <br>
+            SurName: <input type="text"> <br>
+            email: <input type="email"> <br>
+            your websie url: <input type="text"> <br>
+
+            <div class="contact_button">
+                <button>submit</button>
+            </div>
+        </div>
+    </div> -->
+    <!-- <script>
+        function myfun() {
+            name = document.form.username.value;
+            var phno_format = 123567890;
+            phno = document.form.username.value;
+
+            if (name == "") {
+                alert("name is requird");
+                return false;
+            }
+            else if (name.length < 3) {
+                alert("please enter valid name");
+                return false;
+            }
+          else if (phno.match(phno_format)) {
+            alert("success");
+            return false;
+        }
+        else {
+            alert("please enter 10 digots only");
+            return false;
+        }
+
+
+    }
+
+
+
+
+
+    </script> -->
+    <div id="contact" class="margin">
+        <div class="container">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Please fill out the form below to send us an email and we will get back to you as soon as possible.</p>
+              </div>
+              <form name="sentMessage" id="contactForm" novalidate>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div id="success"></div>
+                <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-3 col-md-offset-1 contact-info">
+            <div class="contact-item">
+              <h4>Contact Info</h4>
+              <p><span>Address</span>4321 California St,<br>
+                San Francisco, CA 12345</p>
+            </div>
+            <div class="contact-item">
+              <p><span>Phone</span> +1 123 456 1234</p>
+            </div>
+            <div class="contact-item">
+              <p><span>Email</span> info@company.com</p>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="social">
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div id="demo">
+        <!-- <button type="button" onclick="dataload()"></button> -->
+    </div>
+
+    <div class="parent7">
+        <div id="c" class="c10">
+            <img src="img/logo.png" alt="" width="300px" class="footimg">
+            <p class="p10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique expedita veritatis
+                nulla cupiditate porro?</p>
+        </div>
+        <div id="c1" class="c20">
+            <h2 class="product">Product</h2>
+            <ul class="ul1">
+                <li>Feature</li>
+                <li>Pricing</li>
+                <li>Visiting</li>
+                <li>Case Studies</li>
+                <li>Reviews</li>
+            </ul>
+        </div>
+        <div id="c1" class="c20">
+            <h2 class="product">Company</h2>
+            <ul class="ul1">
+                <li>About</li>
+                <li>Contact us</li>
+                <li>Careers</li>
+                <li>Culture</li>
+                <li>Blog</li>
+            </ul>
+        </div>
+        <div id="c1" class="c20">
+            <h2 class="product">Support</h2>
+            <ul class="ul1">
+                <li>Getting started </li>
+                <li>Help center</li>
+                <li>Server status</li>
+                <li>Report a bug</li>
+                <li>Chat support</li>
+            </ul>
+        </div>
+        <div id="c2" class="c30">
+            <h2 class="product">Contact us</h2>
+            <ul class="ul1">
+                <li>homersheaven@gmail.com</li>
+                <li>(0261)687-5892</li>
+                <li>366 Mcallister St <br> Surat Gujarat</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+<!-- function myfun() {
+    var phno_format = 123567890;
+    phno = document.form.username.value;
+    if (phno.match(phno_format)) {
+        alert("success");
+        return false;
+    }
+    else {
+        alert("please enter 10 digots only");
+        return false;
+    }
+
+
+} -->

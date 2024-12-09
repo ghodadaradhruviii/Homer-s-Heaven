@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+<style>
+    /* hide scrollbar for chrome use this */
+    *::-webkit-scrollbar{
+            display: none;      
+        }
+
+        .parent {
+            width: 100%;
+            height: 100vh;
+            background-image: url(img/img\ 6.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .navbar {
+            width: 99%;
+            margin: auto;
+            padding:-20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border: 2px solid black; */
+        }
+
+        .logo {
+            width: 400px;
+            cursor: pointer;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 25px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: rgb(243, 240, 240);
+            font-size: 17px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            transition: .5s color,  .5s border-bottom;
+        }
+        .navbar ul li a::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background: rgb(8, 8, 56);
+            transition: width 0.3s ease;
+        }
+        .navbar ul li a:hover::after{
+            width: 100%;
+        }
+        /* .navbar ul li a:hover {
+            color: rgb(8, 8, 56);
+            border-bottom: 3px solid green;
+            
+        } */
+        .login{
+            
+            width: 95px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: rgb(68, 68, 94);
+            margin: 0px;
+            padding: 10px;
+            padding-left: 20px;
+            display: flex;
+            justify-content: center;
+        } 
+        .content {
+            width: 900px;
+            margin-left: 100px;
+            margin-top: 80px;
+        }
+
+        .H1 {
+            color: rgb(250, 248, 248);
+            font-size: 60px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-bottom: 0px;
+        }
+
+        .p1,
+        .p2 {
+            color: rgb(213, 209, 209);
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .parent7 {
+            width: 100%;
+            margin-left: 0px;
+            height: 360px;
+            margin-top: 100px;
+            border: 2px solid black;
+            display: flex;
+            /* justify-content: center; */
+            /* margin-bottom: 200px; */
+            background-color: rgb(8, 8, 56);
+        }
+
+        .c10 {
+            width: 330px;
+            height: 320px;
+            /* border: 2px solid black; */
+            margin: 20px;
+
+        }
+
+        .p10 {
+            font-size: 16px;
+            color: rgb(195, 192, 192);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .c20 {
+            width: 200px;
+            height: 320px;
+            /* border: 2px solid white; */
+            margin: 20px 10px;
+        }
+
+        .product {
+            color: rgb(214, 210, 210);
+            cursor: pointer;
+            font-size: 20px;
+            margin: 30px;
+            margin-top: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .ul1 {
+            list-style: none;
+            margin: 20px;
+            color: rgb(196, 193, 193);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        li {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .c30 {
+            width: 270px;
+            height: 320px;
+            /* border: 2px solid black; */
+            margin: 20px;
+
+        }
+        .see{
+            display: flex;
+            justify-content: center;
+            margin: 22px;
+        }
+        .see button{
+            list-style: none;
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            /* border: 2px solid black; */
+            display: block;
+            text-align: center;
+            background-color:  rgb(8, 8, 56);
+            color: white;
+            font-size: 16px;
+            border: none;
+         
+        }
+        .see button:hover{
+            color: rgb(8, 8, 56);
+            background-color: white;
+        }
+       
+</style>
+<body>
+    <div class="parent">
+        <div class="navbar">
+            <img class="logo" src="img/logo.png" alt="">
+            <ul>
+                <li ><a href="home.html" class="active"> HOME</a></li>
+                <li><a href="listing.html"> LISTING</a></li>
+                <li><a href="sevice.html">SERVICES</a></li>
+
+                <li><a href="contact.html">CONTACT US</a></li>
+
+                <i class="fa-solid fa-arrow-right"></i> 
+                <li class="login"><a href="login.html">LOG IN</a></li>
+
+
+
+
+            </ul>
+            <span class="mb-search__tab__ani" style="width: 65px; left: 630px;"></span>
+        </div>
+        <div class="content">
+            <h1 class="H1">Finding Your New <br>Home Is Simple</h1>
+            <p class="p1"><br>Homer's heaven is your go to destination for finding the <br> perfect rental home to suit
+                your needs.</p>
+            <p class="p2">With thousands of property listings accross the india.</p>
+        </div>
+    </div>
+ 
+<div id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Services</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service-media"> <img src="img/services/service-1.jpg" alt=" "> </div>
+        <div class="service-desc">
+          <h3>New Home Construction</h3>
+          <p>A visual guide that breaks down each step in the construction process, making it easy for potential homeowners to understand A breakdown of the various costs involved in new home construction.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-media"> <img src="img/services/service-2.jpg" alt=" "> </div>
+        <div class="service-desc">
+          <h3>Home Additions</h3>
+          <p>Explore various types of home additions, such as room extensions, bump-outs, second-story additions, and in-law suites.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-media"> <img src="img/services/service-3.jpg" alt=" "> </div>
+        <div class="service-desc">
+          <h3>Bathroom Remodels</h3>
+          <p>Explore Our Latest Bathroom Models" A gallery of high-quality images featuring different bathroom models, from compact designs to luxurious master baths. </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service-media"> <img src="img/services/service-4.jpg" alt=" "> </div>
+        <div class="service-desc">
+          <h3>Kitchen Remodels</h3>
+          <p>Different kitchen layouts (e.g., galley, L-shaped, U-shaped, island-centric) and their pros and cons, A downloadable checklist to guide homeowners through the planning.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-media"> <img src="img/services/service-5.jpg" alt=" "> </div>
+        <div class="service-desc">
+          <h3>Windows & Doors</h3>
+          <p>Explore different window styles such as casement, double-hung, bay, and picture windows, detailing the aesthetic .</p>
+      </div>
+      
+    
+    </div>
+  </div>
+</div>
+<div id="portfolio"> 
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Works</h2>
+      </div>
+      <div class="row">
+        <div class="portfolio-items">
+          <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="portfolio-item">
+              <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <h4>Lorem Ipsum</h4>
+                </div>
+                <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="portfolio-item">
+              <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <h4>Adipiscing Elit</h4>
+                </div>
+                <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="portfolio-item">
+              <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <h4>Lorem Ipsum</h4>
+                </div>
+                <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="portfolio-item">
+              <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <h4>Lorem Ipsum</h4>
+                </div>
+                <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="portfolio-item">
+              <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <h4>Adipiscing Elit</h4>
+                </div>
+                <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="portfolio-item">
+              <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <h4>Dolor Sit</h4>
+                </div>
+                <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="portfolio-item">
+              <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <h4>Dolor Sit</h4>
+                </div>
+                <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="portfolio-item">
+              <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <h4>Lorem Ipsum</h4>
+                </div>
+                <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="portfolio-item">
+              <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <h4>Adipiscing Elit</h4>
+                </div>
+                <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parent7">
+    <div id="c" class="c10">
+        <img src="img/logo.png" alt="" width="300px" class="footimg">
+        <p class="p10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique expedita veritatis
+            nulla cupiditate porro?</p>
+    </div>
+    <div id="c1" class="c20">
+        <h2 class="product">Product</h2>
+        <ul class="ul1">
+            <li>Feature</li>
+            <li>Pricing</li>
+            <li>Visiting</li>
+            <li>Case Studies</li>
+            <li>Reviews</li>
+        </ul>
+    </div>
+    <div id="c1" class="c20">
+        <h2 class="product">Company</h2>
+        <ul class="ul1">
+            <li>About</li>
+            <li>Contact us</li>
+            <li>Careers</li>
+            <li>Culture</li>
+            <li>Blog</li>
+        </ul>
+    </div>
+    <div id="c1" class="c20">
+        <h2 class="product">Support</h2>
+        <ul class="ul1">
+            <li>Getting started </li>
+            <li>Help center</li>
+            <li>Server status</li>
+            <li>Report a bug</li>
+            <li>Chat support</li>
+        </ul>
+    </div>
+    <div id="c2" class="c30">
+        <h2 class="product">Contact us</h2>
+        <ul class="ul1">
+            <li>homersheaven@gmail.com</li>
+            <li>(0261)687-5892</li>
+            <li>366 Mcallister St <br> Surat Gujarat</li>
+        </ul>
+    </div>
+</div>
+
+
+ 
+
+</body>
+</html>

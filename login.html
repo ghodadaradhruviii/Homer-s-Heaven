@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./jquery.js">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+    </script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+    </script>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        scrollbar-width: none;
+        /* hide scrollbar for Fireox */
+    }
+
+    /* hide scrollbar for chrome use this */
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
+    .parent {
+        width: 100%;
+        height: 100vh;
+        background-image: url(img/img\ 6.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar {
+        width: 99%;
+        margin: auto;
+        padding: -20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* border: 2px solid black; */
+    }
+
+    .logo {
+        width: 400px;
+        cursor: pointer;
+    }
+
+    .navbar ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 25px;
+        position: relative;
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: rgb(243, 240, 240);
+        font-size: 17px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        transition: .5s color, .5s border-bottom;
+    }
+
+    .login {
+
+        width: 95px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: rgb(68, 68, 94);
+        margin: 0px;
+        padding: 10px;
+        padding-left: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-title {
+        margin-bottom: 70px;
+    }
+
+    .section-title h2 {
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        margin-left:200px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    }
+
+    h2{
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        margin-left:200px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+        box-shadow: 20px rgba(0,0,0,0.01);
+    }
+
+    .parent7 {
+            width: 100%;
+            margin-left: 0px;
+            height: 360px;
+            margin-top: 100px;
+            border: 2px solid black;
+            display: flex;
+            /* justify-content: center; */
+            /* margin-bottom: 200px; */
+            background-color: rgb(8, 8, 56);
+        }
+
+        .c10 {
+            width: 330px;
+            height: 320px;
+            /* border: 2px solid black; */
+            margin: 20px;
+
+        }
+
+        .p10 {
+            font-size: 16px;
+            color: rgb(195, 192, 192);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .c20 {
+            width: 200px;
+            height: 320px;
+            /* border: 2px solid white; */
+            margin: 20px 10px;
+        }
+        
+        .product {
+            color: rgb(214, 210, 210);
+            cursor: pointer;
+            font-size: 20px;
+            margin: 30px;
+            margin-top: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .ul1 {
+            list-style: none;
+            margin: 20px;
+            color: rgb(196, 193, 193);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        li {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .c30 {
+            width: 270px;
+            height: 320px;
+            /* border: 2px solid black; */
+            margin: 20px;
+
+        }
+
+      
+
+</style>
+
+<body>
+    <div class="parent">
+        <div class="navbar">
+            <img class="logo" src="img/logo.png" alt="">
+            <ul>
+                <li><a href="home.html" class="active"> HOME</a></li>
+                <li><a href="listing.html"> LISTING</a></li>
+                <li><a href="sevice.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+                <!-- <i class="fa-solid fa-arrow-right"></i>  -->
+                <li class="login"><a href="regestationform.html">LOG IN</a></li>
+
+
+
+            </ul>
+            <span class="mb-search__tab__ani" style="width: 65px; left: 630px;"></span>
+        </div>
+
+    </div>
+
+
+
+    <div class="section-title">
+        <h2>Login</h2>
+    </div>
+
+    <div class="container">
+        <div class="col-lg-8
+					m-auto d-block">
+            <form>
+                <div class="form-group">
+                    <label for="user">
+                        Username:
+                    </label>
+                    <input type="text" name="username" id="usernames" class="form-control">
+                    <h5 id="usercheck" style="color: red;">
+                        **Username is missing
+                    </h5>
+                </div>
+
+                <div class="form-group">
+                    <label for="user">
+                        Email:
+                    </label>
+                    <input type="email" name="email" id="email" required class="form-control">
+                    <small id="emailvalid" class="form-text text-muted invalid-feedback">
+                        Your email must be a valid email
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        Password:
+                    </label>
+                    <input type="password" name="pass" id="password" class="form-control">
+                    <h5 id="passcheck" style="color: red;">
+                        **Please Fill the password
+                    </h5>
+                </div>
+
+                <div class="form-group">
+                    <label for="conpassword">
+                        Confirm Password:
+                    </label>
+                    <input type="password" name="username" id="conpassword" class="form-control">
+                    <h5 id="conpasscheck" style="color: red;">
+                        **Password didn't match
+                    </h5>
+                </div>
+
+                <input type="submit" id="submitbtn" value="Submit" class="btn btn-primary">
+            </form>
+        </div>
+    </div><br><br><br>
+    <h2>Registration Form</h2>
+    <div class="container">
+        <form name="registration_form" id="registration_form" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control"
+                            placeholder="Enter your password">
+                    </div>
+                    <div class="form-group">
+                        <label for="conf_password">Confirm Password</label>
+                        <input type="password" name="conf_password" id="conf_password" class="form-control"
+                            placeholder="Enter your confirm password">
+                    </div>
+                </div>
+                <!-- end col -->
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="mobile_number">Mobile number</label>
+                        <input type="number" name="mobile_number" id="mobile_number" class="form-control"
+                            placeholder="Enter your mobile number">
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <select name="language" id="language" class="form-control">
+                            <option value="">Select language</option>
+                            <option value="English">English</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="Russian">Russian</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="attachement">Attachement</label>
+                        <input type="file" name="attachement" id="attachement" class="form-control">
+                    </div>
+                    <div class="form-check">
+                        <label for="gender">Gender</label>&nbsp; &nbsp; &nbsp; &nbsp;
+                        <input type="radio" name="gender" id="gender1" class="form-check-input" value="male"> 
+                        <label class="form-check-label" for="gender"> Male </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input type="radio" name="gender" id="gender2" class="form-check-input" value="female">
+                        <label class="form-check-label" for="gender"> Female </label><br><br>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="term_of_use" id="term_of_use"> I accept the <a
+                                href="#">Terms of Use</a> </label><br><br>
+                    </div>
+                    <button type="submit" class="btn btn-success">Register Now</button>
+                </div>
+                <!-- end col -->
+            </div>
+            <!--  end row -->
+        </form>
+    </div>
+
+
+    <br>
+    <center>Developed by <a href="https://shinerweb.com/">Shinerweb</a></center>
+
+
+    <div class="parent7">
+        <div id="c" class="c10">
+            <img src="img/logo.png" alt="" width="300px" class="footimg">
+            <p class="p10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique expedita veritatis
+                nulla cupiditate porro?</p>
+        </div>
+        <div id="c1" class="c20">
+            <h2 class="product">Product</h2>
+            <ul class="ul1">
+                <li>Feature</li>
+                <li>Pricing</li>
+                <li>Visiting</li>
+                <li>Case Studies</li>
+                <li>Reviews</li>
+            </ul>
+        </div>
+        <div id="c1" class="c20">
+            <h2 class="product">Company</h2>
+            <ul class="ul1">
+                <li>About</li>
+                <li>Contact us</li>
+                <li>Careers</li>
+                <li>Culture</li>
+                <li>Blog</li>
+            </ul>
+        </div>
+        <div id="c1" class="c20">
+            <h2 class="product">Support</h2>
+            <ul class="ul1">
+                <li>Getting started </li>
+                <li>Help center</li>
+                <li>Server status</li>
+                <li>Report a bug</li>
+                <li>Chat support</li>
+            </ul>
+        </div>
+        <div id="c2" class="c30">
+            <h2 class="product">Contact us</h2>
+            <ul class="ul1">
+                <li>homersheaven@gmail.com</li>
+                <li>(0261)687-5892</li>
+                <li>366 Mcallister St <br> Surat Gujarat</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    <script>
+        // Document is ready
+        $(document).ready(function jaydip() {
+
+            // Validate Username
+            $("#usercheck").hide();
+            let usernameError = true;
+            $("#usernames").keyup(function () {
+                validateUsername();
+            });
+
+            function validateUsername() {
+                let usernameValue = $("#usernames").val();
+                if (usernameValue.length == "") {
+                    $("#usercheck").show();
+                    usernameError = false;
+                    return false;
+                } else if (usernameValue.length < 3 || usernameValue.length > 10) {
+                    $("#usercheck").show();
+                    $("#usercheck").html("**length of username must be between 3 and 10");
+                    usernameError = false;
+                    return false;
+                } else {
+                    $("#usercheck").hide();
+                }
+            }
+
+            // Validate Email
+            const email = document.getElementById("email");
+            email.addEventListener("blur", () => {
+                let regex =
+                    /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+                let s = email.value;
+                if (regex.test(s)) {
+                    email.classList.remove("is-invalid");
+                    emailError = true;
+                } else {
+                    email.classList.add("is-invalid");
+                    emailError = false;
+                }
+            });
+
+            // Validate Password
+            $("#passcheck").hide();
+            let passwordError = true;
+            $("#password").keyup(function () {
+                validatePassword();
+            });
+            function validatePassword() {
+                let passwordValue = $("#password").val();
+                if (passwordValue.length == "") {
+                    $("#passcheck").show();
+                    passwordError = false;
+                    return false;
+                }
+                if (passwordValue.length < 3 || passwordValue.length > 10) {
+                    $("#passcheck").show();
+                    $("#passcheck").html(
+                        "**length of your password must be between 3 and 10"
+                    );
+                    $("#passcheck").css("color", "red");
+                    passwordError = false;
+                    return false;
+                } else {
+                    $("#passcheck").hide();
+                }
+            }
+
+            // Validate Confirm Password
+            $("#conpasscheck").hide();
+            let confirmPasswordError = true;
+            $("#conpassword").keyup(function () {
+                validateConfirmPassword();
+            });
+            function validateConfirmPassword() {
+                let confirmPasswordValue = $("#conpassword").val();
+                let passwordValue = $("#password").val();
+                if (passwordValue != confirmPasswordValue) {
+                    $("#conpasscheck").show();
+                    $("#conpasscheck").html("**Password didn't Match");
+                    $("#conpasscheck").css("color", "red");
+                    confirmPasswordError = false;
+                    return false;
+                } else {
+                    $("#conpasscheck").hide();
+                }
+            }
+
+            // Submit button
+            $("#submitbtn").click(function () {
+                validateUsername();
+                validatePassword();
+                validateConfirmPassword();
+                validateEmail();
+                if (
+                    usernameError == true &&
+                    passwordError == true &&
+                    confirmPasswordError == true &&
+                    emailError == true
+                ) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        });
+        $("#registration_form").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 3
+                },
+                conf_password: {
+                    required: true,
+                    equalTo: "#password"
+                },
+                mobile_number: {
+                    required: true,
+                    minlength: 10,
+                    maxlength: 10
+                },
+                gender: {
+                    required: true
+                },
+                language: {
+                    required: true
+                },
+                gender: {
+                    required: true
+                },
+                attachement: {
+                    required: true,
+                    extension: "pdf|jpeg|png|jpg|zip|7z",
+                    filesize: 5242880 // 1048576 means 1 MB
+                },
+                term_of_use: {
+                    required: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Please enter your name!"
+                },
+                email: {
+                    required: "Please enter an email!",
+                    email: "Please enter valid email address."
+                },
+                password: {
+                    required: "Please enter password."
+                },
+                conf_password: {
+                    required: "Please enter confirm password.",
+                    equalTo: "Password and confirm password does not match"
+                },
+                mobile_number: {
+                    required: "Please enter mobile number."
+                },
+                gender: {
+                    required: "You must select a gender."
+                },
+                language: {
+                    required: "Please select your language!"
+                },
+                gender: {
+                    required: "You must select a gender."
+                },
+                attachement: {
+                    required: "Please select JPG, PNG, PDF or ZIP file.",
+                    extension: "File must be JPG, PNG, PDF or ZIP.",
+                    filesize: "File size must be less than 5 MB."
+                },
+                term_of_use: {
+                    required: "Please confirm terms of use."
+                }
+            }
+        });
+
+    </script>
+    <script type="text/javascript">
+        // ---- set custome validate method for letter allow only
+        jQuery.validator.addMethod("lettersonly", function (value, element) {
+            return this.optional(element) || /^[a-z ]+$/i.test(value);
+        }, "Please enter alphabets only.");
+        // ---- set custome validate method for filesize
+        jQuery.validator.addMethod('filesize', function (value, element, param) {
+            return this.optional(element) || (element.files[0].size <= param)
+        }, 'File size must be less than {0}');
+    </script>
+</body>
+
+</html>
